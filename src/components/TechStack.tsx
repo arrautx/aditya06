@@ -37,18 +37,17 @@ import { FaCode, FaDatabase, FaJava } from "react-icons/fa";
 interface Tech {
   name: string;
   Icon: IconType;
-  /** Official brand color (light mode). */
   color: string;
-  /** Optional dark-mode variant — black logos render white on dark,
-      matching the portfolio's existing mono-dark icon convention. */
   darkColor?: string;
 }
-
-/* One continuous, tightly packed wall — no category containers.
-   Official react-icons marks in their brand colors. */
 const STACK: Tech[] = [
   { name: "React", Icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", Icon: SiNextdotjs, color: "#000000", darkColor: "#ffffff" },
+  {
+    name: "Next.js",
+    Icon: SiNextdotjs,
+    color: "#000000",
+    darkColor: "#ffffff",
+  },
   { name: "Expo", Icon: SiExpo, color: "#000020", darkColor: "#ffffff" },
   { name: "Django", Icon: SiDjango, color: "#092E20", darkColor: "#44B78B" },
   { name: "Spring Boot", Icon: SiSpringboot, color: "#6DB33F" },
@@ -60,10 +59,20 @@ const STACK: Tech[] = [
   { name: "Redis", Icon: SiRedis, color: "#FF4438" },
   { name: "Prisma", Icon: SiPrisma, color: "#2D3748", darkColor: "#8FA0C8" },
   { name: "Zustand", Icon: TbLetterZ, color: "#453D39", darkColor: "#A89F94" },
-  { name: "TanStack Query", Icon: TbDatabaseSearch, color: "#6B6455", darkColor: "#ECE8D1" },
+  {
+    name: "TanStack Query",
+    Icon: TbDatabaseSearch,
+    color: "#6B6455",
+    darkColor: "#ECE8D1",
+  },
   { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
   { name: "Tailwind", Icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "shadcn/ui", Icon: SiShadcnui, color: "#000000", darkColor: "#ffffff" },
+  {
+    name: "shadcn/ui",
+    Icon: SiShadcnui,
+    color: "#000000",
+    darkColor: "#ffffff",
+  },
   { name: "Motion", Icon: SiFramer, color: "#0055FF" },
   { name: "GSAP", Icon: SiGreensock, color: "#88CE02" },
   { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
@@ -89,8 +98,6 @@ export default function TechStack() {
 
   return (
     <section>
-      {/* Section header — same pattern as the other sections:
-          serif heading + dashed rule + uppercase counter. */}
       <div className="flex items-center gap-4 sm:gap-5">
         <h2
           className="text-foreground text-xl sm:text-2xl leading-none tracking-wide whitespace-nowrap"
@@ -108,9 +115,6 @@ export default function TechStack() {
           {STACK.length} Tools
         </span>
       </div>
-      {/* One continuous pill wall over a subtle dot grid — the grid shows
-          only in the gaps between pills. Single uniform gap on both axes,
-          flush with the content edge on both sides. */}
       <div className="relative mt-5">
         <div
           aria-hidden="true"
@@ -123,7 +127,7 @@ export default function TechStack() {
         />
 
         <div className="relative">
-          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+          <div className="flex flex-wrap justify-between gap-1.5 sm:gap-2">
             {STACK.map((tech, i) => (
               <motion.span
                 key={tech.name}
@@ -137,7 +141,8 @@ export default function TechStack() {
                   aria-hidden="true"
                   className="size-4 shrink-0"
                   style={{
-                    color: isDark && tech.darkColor ? tech.darkColor : tech.color,
+                    color:
+                      isDark && tech.darkColor ? tech.darkColor : tech.color,
                   }}
                 />
                 {tech.name}

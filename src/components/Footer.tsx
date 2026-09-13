@@ -98,16 +98,20 @@ export default function Footer() {
           </span>
 
           {/* layers share one grid cell so the block is always as tall as the
-              tallest quote — swapping quotes never reflows the layout */}
+              tallest quote — swapping quotes never reflows the layout.
+              Only the active slide carries a transition: an inactive slide
+              drops to opacity 0 immediately, so the outgoing and incoming
+              quotes never render on top of each other mid-swap. */}
           <div className="grid">
             {quotes.map((q, i) => (
               <div
                 key={i}
                 aria-hidden={i !== index}
-                className={`col-start-1 row-start-1 transition-opacity duration-500 motion-reduce:transition-none ${
-                  i === index ? "" : "pointer-events-none"
+                className={`col-start-1 row-start-1 motion-reduce:transition-none ${
+                  i === index
+                    ? "transition-opacity duration-500 opacity-100"
+                    : "opacity-0 pointer-events-none"
                 }`}
-                style={{ opacity: i === index ? 1 : 0 }}
               >
                 <p
                   className="text-[22px] sm:text-[26px] md:text-[30px] font-medium italic leading-[1.65] text-foreground"

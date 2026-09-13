@@ -5,6 +5,7 @@ import TechStack from "@/components/TechStack";
 import ElsewhereSection from "@/components/ElsewhereSection";
 import Footer from "@/components/Footer";
 import Oneko from "@/components/Oneko";
+import LandingMusic from "@/components/LandingMusic";
 import ExperienceSection from "@/components/Experience";
 import LastPlayed from "@/components/LastPlayed";
 import GamingCard from "@/components/GamingCard";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Oneko />
+      <LandingMusic />
 
       <div className="relative min-h-screen bg-background text-foreground font-sans">
 
