@@ -36,18 +36,6 @@ const experiences = [
       "Spring Boot",
     ],
   },
-  {
-    company: "Personal Work",
-    role: "Freelance",
-    duration: "Nov 2025 – Nov 2025",
-    location: "Bangalore, India · Remote",
-    image: "/Freelance.jpg",
-    badge: "Freelance",
-    current: false,
-
-    bullets: [],
-    stack: [],
-  },
 ];
 
 export default function ExperiencePage() {

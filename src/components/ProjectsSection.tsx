@@ -25,42 +25,42 @@ const projects: Project[] = [
       "A real-time collaborative whiteboard that allows multiple users to join the same room",
     imageSrc: "/project2.png",
     backgroundImage: "/b1.png",
-    tags: ["Next.js","TypeScript", "Tailwind" , "Bun" ,"Prisma" ,"Radix UI"],
+    tags: ["Next.js","TypeScript", "Tailwind" , "Bun" ,"Prisma" ,"Radix UI" , "shadcn/ui"],
     github: "https://github.com/arrautx",
     live: "https://github.com/arrautx",
     status: "live",
   },
   {
-    title: "Scribble3D",
+    title: "Transcoder",
     description:
-      "Turn your sketches into 3D objects and worlds — no 3D skills required.",
+      "Turn raw video uploads into streaming-ready HLS — no encoding pipeline required",
     imageSrc: "/project1.png",
     backgroundImage: "/b2.png",
-    tags: ["Next.js", "tldraw", "Three.js", "TypeScript"],
+    tags: ["Next.js", "shadcn/ui", "Bun", "TypeScript" , "Prisma" , "Redis"],
     github: "https://github.com/arrautx",
     status: "live",
   },
-  {
-    title: "Blueprint",
-    description:
-      "Blueprint is an AI UI builder that turns prompts into structured, production-ready interfaces.",
-    imageSrc: "/coming.png",
-    backgroundImage: "/b3.png",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Prisma", "Bun"],
-    github: "https://github.com/arrautx",
-    status: "building",
-    comingSoon: true,
-  },
-  {
-    title: "Inquiro",
-    description:
-      "Inquiro is an AI-powered search engine that helps you find information on the internet.",
-    imageSrc: "/project3.png",
-    backgroundImage: "/b4.png",
-    tags: ["Next.js", "TypeScript", "Radix UI", "Gemini"],
-    github: "https://github.com/arrautx",
-    status: "not-started",
-  },
+  // {
+  //   title: "Blueprint",
+  //   description:
+  //     "Blueprint is an AI UI builder that turns prompts into structured, production-ready interfaces.",
+  //   imageSrc: "/coming.png",
+  //   backgroundImage: "/b3.png",
+  //   tags: ["Next.js", "TypeScript", "Tailwind", "Prisma", "Bun"],
+  //   github: "https://github.com/arrautx",
+  //   status: "building",
+  //   comingSoon: true,
+  // },
+  // {
+  //   title: "Inquiro",
+  //   description:
+  //     "Inquiro is an AI-powered search engine that helps you find information on the internet.",
+  //   imageSrc: "/project3.png",
+  //   backgroundImage: "/b4.png",
+  //   tags: ["Next.js", "TypeScript", "Radix UI", "Gemini"],
+  //   github: "https://github.com/arrautx",
+  //   status: "not-started",
+  // },
 ];
 
 const statusConfig = {
