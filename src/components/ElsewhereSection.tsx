@@ -10,7 +10,7 @@ const links = [
   },
   {
     label: "LeetCode",
-    href: "https://leetcode.com/u/pandas03/",
+    href: "https://leetcode.com/u/arraut/",
     favicon: "https://leetcode.com/favicon.ico",
   },
   {
